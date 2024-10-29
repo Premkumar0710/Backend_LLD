@@ -23,6 +23,9 @@ public class Main {
             // Way 1
             List<Integer> nums = Arrays.asList(1, 2, 4, 5, 3, 6, 8, 9);
             Stream<Integer> stream = nums.stream();
+            nums.stream().forEach((n)-> System.out.print(n+" "));
+            nums.stream().forEach(System.out::println);
+           // System.out.println(stream); // prints address , its a lazy evaluator
 
             // Way 2
             Integer[] arr = {10, 20, 30, 40};
@@ -51,6 +54,12 @@ public class Main {
 
             // for every car , extract the price
             System.out.println(cars.stream().map((car)-> car.price).toList());
+
+
+
+            // Stream
+// 1. Intermediary Operations -> map(), filter()
+// 2. Terminal Operations -> forEach(), collect(), reduce()
 
         }
     }
